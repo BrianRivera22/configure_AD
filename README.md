@@ -171,9 +171,9 @@ This will allow any user under the Domain Users group in the domain controller t
 <img src="https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/14.png"/>
 </p>
 <p>
-Within DC-1 as Jane.Admin, open PowerShell ISE as ADMINISTRATOR and paste the following script --> https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1
-
-Be sure to edit the password you want the users to have at the top of the script text.
+Within DC-1 as Jane.Admin, open PowerShell ISE as ADMINISTRATOR and paste the following [script](https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/AD_PS)
+  
+<p>Be sure to edit the password you want the users to have at the top of the script text.
 </p>
 <br />
 
