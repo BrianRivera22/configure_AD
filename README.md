@@ -21,13 +21,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 1) Prepare Active Directory Infrastructure in Azure
-    - Setup Domain Controller VM (Windows Server 2022) named “DC-1”
-    - Setup Client VM (Windows 10) named “Client-1”
+    - Setup Domain Controller VM (Windows Server 2022) named “dc-1”
+    - Setup Client VM (Windows 10) named “client-1”
 2) Deploy Active Directory
     - Create a Domain Admin user within the domain
-    - Join Client-1 to your domain (mydomain.com)
+    - Join client-1 to your domain (mydomain.com)
 3) Create users using PowerShell
-    - Setup Remote Desktop for non-administrative users on Client-1
+    - Setup Remote Desktop for non-administrative users on client-1
     - Create a bunch of additional users and attempt to log into client-1 with one of the users
 
 
@@ -40,9 +40,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>
 Create two VMs in Azure ensuring that they are in the SAME VIRTUAL NETWORK and SUBNET MASK (see networking tab when creating VM).
 
-Name one DC-1 (Domain Controller) and set the image to Windows Server 2022.
+Name one dc-1 (Domain Controller) and set the image to Windows Server 2022.
 
-Name second VM Client-1 and set the image to Windows 10.
+Name second VM client-1 and set the image to Windows 10.
 </p>
 <br />
 
@@ -50,7 +50,7 @@ Name second VM Client-1 and set the image to Windows 10.
 <img src="https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/2.png"/>
 </p>
 <p>
-Click into DC-1 -> Network Settings -> Network Interface. We will configure DC-1 to have a static IP address.
+Click into dc-1 -> Network Settings -> Network Interface. We will configure dc-1 to have a static IP address.
 
 Navigate to ipconfig1 -> select Static
 </p>
@@ -61,7 +61,7 @@ Navigate to ipconfig1 -> select Static
 <img src="https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/3.png"/>
 </p>
 <p>
-Using DC-1's public IP address, remote desktop into DC-1. Navigate to the start menu -> run -> search for wf.msc
+Using dc-1's public IP address, remote desktop into dc-1. Navigate to the start menu -> run -> search for wf.msc
 
 This will open up the firewall settings for DC-1. Go to Windows Defender Firewall Properties and turn off the firewall for each tab. Be sure to click apply when finished.
 </p>
