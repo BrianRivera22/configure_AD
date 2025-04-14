@@ -20,13 +20,20 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+1) Prepare Active Directory Infrastructure in Azure
+    - Setup Domain Controller VM (Windows Server 2022) named “DC-1”
+    - Setup Client VM (Windows 10) named “Client-1”
+2) Deploy Active Directory
+    - Create a Domain Admin user within the domain
+    - Join Client-1 to your domain (mydomain.com)
+3) Create users using PowerShell
+    - Setup Remote Desktop for non-administrative users on Client-1
+    - Create a bunch of additional users and attempt to log into client-1 with one of the users
+
 
 <h2>Deployment and Configuration Steps</h2>
 
+<h4>1. Prepare Active Directory Infrastructure in Azure</h4>
 <p>
 <img src="https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/1.png"/>
 </p>
@@ -49,6 +56,7 @@ Navigate to ipconfig1 -> select Static
 </p>
 <br />
 
+<h4>2. Deploy Active Directory</h4>
 <p>
 <img src="https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/3.png"/>
 </p>
@@ -156,6 +164,8 @@ We can verify the join was successful by going back into DC-1 and Active Directo
 Create a new OU named _CLIENTS and drag Client-1 into it.
 </p>
 <br />
+
+<h4>3. Create users using PowerShell</h4>
 
 <p>
 <img src="https://github.com/BrianRivera22/configure_AD/blob/main/AD%20Implementation%20%26%20PowerShell%20User%20Creation/13.png"/>
